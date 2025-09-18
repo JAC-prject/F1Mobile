@@ -1,0 +1,37 @@
+[ext_resource path="res://Scripts/controls_mobile.gd" type="Script" id=1]
+[ext_resource path="res://Texturas/UI/btn_accel.png" type="Texture" id=2]
+[ext_resource path="res://Texturas/UI/btn_brake.png" type="Texture" id=3]
+[ext_resource path="res://Texturas/UI/btn_drs.png" type="Texture" id=4]
+[ext_resource path="res://Texturas/UI/btn_ers.png" type="Texture" id=5]
+[ext_resource path="res://Texturas/UI/steer_pad.png" type="Texture" id=6]
+[gd_scene load_steps=2 format=2]
+[ext_resource path="res://Scripts/controls_mobile.gd" type="Script" id=1]
+[node name="ControlsMobile" type="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AccelButton" type="TouchScreenButton" parent="ControlsMobile"]
+texture_normal = ExtResource( 2 )
+rect_position = Vector2(900, 520)
+rect_size = Vector2(160,160)
+
+[node name="BrakeButton" type="TouchScreenButton" parent="ControlsMobile"]
+texture_normal = ExtResource( 3 )
+rect_position = Vector2(720, 520)
+rect_size = Vector2(160,160)
+
+[node name="DRSButton" type="TouchScreenButton" parent="ControlsMobile"]
+texture_normal = ExtResource( 4 )
+rect_position = Vector2(540, 520)
+rect_size = Vector2(120,120)
+
+[node name="ERSButton" type="TouchScreenButton" parent="ControlsMobile"]
+texture_normal = ExtResource( 5 )
+rect_position = Vector2(420, 520)
+rect_size = Vector2(120,120)
+
+[node name="SteerPad" type="TextureRect" parent="ControlsMobile"]
+texture = ExtResource( 6 )
+rect_position = Vector2(40, 360)
+rect_size = Vector2(320,320)
+mouse_filter = 2

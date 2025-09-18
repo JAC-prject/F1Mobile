@@ -1,0 +1,53 @@
+[gd_scene load_steps=1 format=2]
+
+[node name="Pista01" type="Node3D"]
+
+[node name="Waypoints" type="Node3D" parent="Pista01"]
+[node name="WP01" type="Marker3D" parent="Waypoints"]
+translation = Vector3(60.000, 0.0, 0.000)
+[node name="WP02" type="Marker3D" parent="Waypoints"]
+translation = Vector3(57.956, 0.0, 5.176)
+[node name="WP03" type="Marker3D" parent="Waypoints"]
+translation = Vector3(51.962, 0.0, 10.000)
+[node name="WP04" type="Marker3D" parent="Waypoints"]
+translation = Vector3(42.426, 0.0, 14.142)
+[node name="WP05" type="Marker3D" parent="Waypoints"]
+translation = Vector3(30.000, 0.0, 17.321)
+[node name="WP06" type="Marker3D" parent="Waypoints"]
+translation = Vector3(15.529, 0.0, 19.319)
+[node name="WP07" type="Marker3D" parent="Waypoints"]
+translation = Vector3(0.000, 0.0, 20.000)
+[node name="WP08" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-15.529, 0.0, 19.319)
+[node name="WP09" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-30.000, 0.0, 17.321)
+[node name="WP10" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-42.426, 0.0, 14.142)
+[node name="WP11" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-51.962, 0.0, 10.000)
+[node name="WP12" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-57.956, 0.0, 5.176)
+[node name="WP13" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-60.000, 0.0, 0.000)
+[node name="WP14" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-57.956, 0.0, -5.176)
+[node name="WP15" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-51.962, 0.0, -10.000)
+[node name="WP16" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-42.426, 0.0, -14.142)
+[node name="WP17" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-30.000, 0.0, -17.321)
+[node name="WP18" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-15.529, 0.0, -19.319)
+[node name="WP19" type="Marker3D" parent="Waypoints"]
+translation = Vector3(-0.000, 0.0, -20.000)
+[node name="WP20" type="Marker3D" parent="Waypoints"]
+translation = Vector3(15.529, 0.0, -19.319)
+[node name="WP21" type="Marker3D" parent="Waypoints"]
+translation = Vector3(30.000, 0.0, -17.321)
+[node name="WP22" type="Marker3D" parent="Waypoints"]
+translation = Vector3(42.426, 0.0, -14.142)
+[node name="WP23" type="Marker3D" parent="Waypoints"]
+translation = Vector3(51.962, 0.0, -10.000)
+[node name="WP24" type="Marker3D" parent="Waypoints"]
+translation = Vector3(57.956, 0.0, -5.176)

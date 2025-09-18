@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=2]
+[ext_resource path="res://Scripts/tv_camera_rig.gd" type="Script" id=1]
+[node name="TVRig" type="Node3D"]
+[node name="Cam1" type="Camera3D" parent="TVRig"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 6, 0 )
+[node name="Cam2" type="Camera3D" parent="TVRig"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -25 )

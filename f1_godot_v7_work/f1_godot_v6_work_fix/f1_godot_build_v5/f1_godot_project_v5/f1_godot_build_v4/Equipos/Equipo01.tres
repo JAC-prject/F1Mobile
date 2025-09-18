@@ -1,0 +1,8 @@
+[gd_resource type="Equipo" load_steps=2]
+[ext_resource path="res://Autos/Auto01.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Autos/Auto02.tscn" type="PackedScene" id=2]
+[resource]
+nombre = "Team 01"
+color_principal = Color(0.5,0.25,0.16666666666666666)
+auto_1 = ExtResource( 1 )
+auto_2 = ExtResource( 2 )

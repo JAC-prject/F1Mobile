@@ -1,0 +1,3 @@
+[gd_resource type="Resource" load_steps=1]
+helmet_texture = "res://Texturas/Helmets/helmet_01.png"
+visor_texture = "res://Texturas/Helmets/visors/visor_01.png"

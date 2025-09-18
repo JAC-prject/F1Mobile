@@ -1,0 +1,4 @@
+[gd_scene load_steps=2 format=2]
+[ext_resource path="res://UI/ControlsMobile.tscn" type="PackedScene" id=20]
+[node name="Main" type="Node"]
+[node name="ControlsMobileInstance" parent="Main" instance=ExtResource( 20 )]
