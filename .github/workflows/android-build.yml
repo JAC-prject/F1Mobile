@@ -1,4 +1,4 @@
-name: Build Godot Android APK
+name: Build Godot Android
 
 on:
   push:
