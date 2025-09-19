@@ -1,8 +1,6 @@
-name: Build Godot Android
+name: Build Godot Android APK
 
 on:
-  push:
-    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -10,32 +8,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
 
-    - name: Set up Android SDK
-      uses: android-actions/setup-android@v2
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
 
-    - name: Download Godot
-      run: |
-        wget https://downloads.tuxfamily.org/godotengine/4.1.1/Godot_v4.1.1-stable_linux.x86_64.zip -O godot.zip
-        unzip godot.zip -d godot
-        sudo mv godot/Godot_v4.1.1-stable_linux.x86_64 /usr/local/bin/godot
-        chmod +x /usr/local/bin/godot
+      - name: Download Godot
+        run: |
+          wget https://downloads.tuxfamily.org/godotengine/3.5.3/mono/Godot_v3.5.3-stable_mono_linux_headless_64.zip
+          unzip Godot_v3.5.3-stable_mono_linux_headless_64.zip -d godot
+          sudo mv godot/Godot_v3.5.3-stable_mono_linux_headless_64 /usr/local/bin/godot
+          sudo chmod +x /usr/local/bin/godot
 
-    - name: Build Android APK
-      run: |
-        godot --headless --verbose --export-release Android build.apk
+      - name: Build Android APK
+        run: |
+          mkdir -p build
+          godot --export "Android" build/game.apk
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v3
-      with:
-        name: F1Mobile-APK
-        path: build.apk
-
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: Godot-Android-APK
+          path: build/game.apk
