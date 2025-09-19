@@ -18,6 +18,44 @@ jobs:
           java-version: 17
 
       - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Download Godot
+        run: |
+          wget https://downloads.tuxfamily.org/godotengine/3.5.3/mono/Godot_v3.5.3-stable_mono_linux_headless_64.zip
+          unzip Godot_v3.5.3-stable_mono_linux_headless_64.zip -d godot
+          sudo mv godot/Godot_v3.5.3-stable_mono_linux_headless_64 /usr/local/bin/godot
+          sudo chmod +x /usr/local/bin/godot
+
+      - name: Build Android APK
+        run: |
+          mkdir -p build
+          godot --export "Android" build/game.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: Godot-Android-APK
+          path: build/game.apkname: Build Godot Android APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
       - name: Download Godot
